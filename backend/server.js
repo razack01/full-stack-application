@@ -21,9 +21,6 @@ app.use(express.json());
 app.use("/api/users", userRoutes)
 
 
-
-
-
 userRegisterconnection.connect((err)=>{
     if (err){
         throw err

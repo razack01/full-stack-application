@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - '4000:4000'  # Match the PORT in .env
+    environment:
+      - DB_HOST=host.docker.internal   # ✅ Connects to your existing local PostgreSQL
+      - DB_USER=postgres
+      - DB_PASSWORD=hornet6435
+      - DB_DATABASE=fsproject
+      - DB_PORT=5432
